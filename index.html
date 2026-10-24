@@ -3,12 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>สามัคคีธรรมสุดสัปดาห์ เกซอนซิตี</title>
-<meta http-equiv="refresh" content="0; url=./261030/">
-<link rel="canonical" href="./261030/">
-<style>body{margin:0;padding:24px 16px;font:1.1rem/1.7 "IBM Plex Sans Thai",Tahoma,sans-serif;background:#fbfaf5;color:#12313b}a{color:#0b5c78}@media (prefers-color-scheme:dark){body{background:#0f1d22;color:#eaf1f1}a{color:#6cc0dc}}</style>
+<title>การประชุมสามัคคีธรรม</title>
+<meta name="description" content="หน้าแรก พาไปยังการประชุมสามัคคีธรรมที่ใกล้ที่สุด">
+<noscript><meta http-equiv="refresh" content="0; url=./261030/"></noscript>
+<style>
+body{margin:0;padding:24px 16px;font:1.1rem/1.7 "IBM Plex Sans Thai",Tahoma,sans-serif;background:#fbfaf5;color:#12313b}
+a{color:#0b5c78}
+@media (prefers-color-scheme:dark){body{background:#0f1d22;color:#eaf1f1}a{color:#6cc0dc}}
+</style>
 </head>
 <body>
-<p>กำลังพาไปยังหน้ากำหนดการ… หากไม่เปลี่ยนหน้าอัตโนมัติ <a href="./261030/">กดที่นี่</a></p>
+<p>กำลังพาไปยังการประชุมล่าสุด… หากไม่เปลี่ยนหน้าอัตโนมัติ <a id="go" href="./261030/">กดที่นี่</a></p>
+<script>
+/* หน้าแรกพาไปยังการประชุมที่ "ใกล้ที่สุด" โดยดูจากรายการ events.json
+   - การประชุมที่ยังไม่จบ (รวมวันสุดท้าย) ที่เริ่มเร็วที่สุด
+   - ถ้าจบหมดแล้ว ให้ไปที่การประชุมที่เริ่มล่าสุด
+   เพิ่มการประชุมใหม่: สร้างโฟลเดอร์ชื่อวันเริ่ม (ปปเดดด) แล้วเพิ่มหนึ่งรายการใน events.json */
+function pick(events, today) {
+  const list = events.filter(e => e && /^\d{6}$/.test(e.id) && /^\d{4}-\d{2}-\d{2}$/.test(e.start) && /^\d{4}-\d{2}-\d{2}$/.test(e.end));
+  if (!list.length) return null;
+  const open = list.filter(e => e.end >= today).sort((a, b) => a.start.localeCompare(b.start));
+  if (open.length) return open[0];
+  return list.sort((a, b) => b.start.localeCompare(a.start))[0];
+}
+(async () => {
+  try {
+    const res = await fetch("./events.json?t=" + Math.floor(Date.now() / 60000), { cache: "no-store" });
+    if (!res.ok) throw new Error("http " + res.status);
+    const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Bangkok", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+    const e = pick(await res.json(), today);
+    if (e) {
+      const url = "./" + e.id + "/";
+      document.getElementById("go").href = url;
+      location.replace(url);
+    }
+  } catch (err) { /* ถ้าอ่านรายการไม่ได้ ให้ใช้ลิงก์ในหน้านี้ */ }
+})();
+</script>
 </body>
 </html>

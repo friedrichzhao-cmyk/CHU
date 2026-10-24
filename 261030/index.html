@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>สามัคคีธรรมสุดสัปดาห์ เกซอนซิตี</title>
+<meta name="description" content="30 ต.ค. – 2 พ.ย. 2026 · เกซอนซิตี ฟิลิปปินส์ · กำหนดการตามเวลาไทยและข้อมูล Zoom">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ประชุมสามัคคีธรรมสุดสัปดาห์ 2026 ที่เกซอนซิตี">
+<meta property="og:description" content="30 ต.ค. – 2 พ.ย. 2026 · เกซอนซิตี ฟิลิปปินส์ · กำหนดการตามเวลาไทยและข้อมูล Zoom">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one calm column, same on phone, tablet and desktop (max 640px). Thai only.
+   Palette: deep teal ink on warm paper, amber for the one thing to act on. */
+:root {
+  --paper: #fbfaf5;
+  --surface: #ffffff;
+  --ink: #12313b;
+  --muted: #566b72;
+  --line: #dde4e2;
+  --teal: #0b5c78;
+  --amber: #e39a1b;
+  --on-amber: #12313b;
+  --accent-text: #8f5a05;
+  --font-body: "IBM Plex Sans Thai", "Noto Sans Thai", "Sarabun", "Thonburi", Tahoma, "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0f1d22; --surface: #16282f; --ink: #eaf1f1; --muted: #9db1b6; --line: #2a3f46;
+    --teal: #6cc0dc; --amber: #f0b445; --on-amber: #0f1d22; --accent-text: #f0b445;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0f1d22; --surface: #16282f; --ink: #eaf1f1; --muted: #9db1b6; --line: #2a3f46;
+  --teal: #6cc0dc; --amber: #f0b445; --on-amber: #0f1d22; --accent-text: #f0b445;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { font-size: 110%; }
+html, body { overflow-x: hidden; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: var(--font-body); font-size: 1rem; line-height: 1.65;
+  padding-inline: 16px; padding-block: 24px 56px;
+  padding-top: max(24px, env(safe-area-inset-top, 0px));
+  padding-bottom: max(56px, env(safe-area-inset-bottom, 0px));
+}
+.wrap { max-width: 640px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+.wrap > * { min-width: 0; }
+[hidden] { display: none !important; }
+button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+
+header { display: grid; gap: 4px; }
+.eyebrow { font-size: .8rem; font-weight: 600; letter-spacing: .04em; color: var(--accent-text); }
+h1 { margin: 0; font-weight: 700; color: var(--teal); font-size: clamp(1.8rem, 7.4vw, 2.6rem); line-height: 1.35; text-wrap: balance; }
+.dates { margin: 2px 0 0; font-size: 1.1rem; font-weight: 500; font-variant-numeric: tabular-nums; }
+.theme { margin: 8px 0 0; font-size: 1.1rem; font-weight: 600; line-height: 1.55; text-wrap: balance; }
+.theme-sub { margin: 0; font-size: .95rem; color: var(--muted); line-height: 1.55; text-wrap: balance; }
+
+.where { display: grid; gap: 6px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.lbl { font-size: .8rem; font-weight: 500; color: var(--muted); line-height: 1.5; }
+select {
+  width: 100%; font: 500 1rem/1.5 var(--font-body); color: var(--ink);
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px;
+}
+.clock { font-size: .9rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.clock b { color: var(--ink); font-weight: 600; }
+
+.next { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; display: grid; gap: 2px; }
+.next .k { font-size: .8rem; font-weight: 600; color: var(--accent-text); font-variant-numeric: tabular-nums; }
+.next .t { font-size: 1.3rem; font-weight: 700; line-height: 1.45; }
+.next .s { font-size: .9rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+h2 { margin: 0; font-size: 1.35rem; font-weight: 700; line-height: 1.4; color: var(--teal); }
+.sub { margin: 2px 0 8px; color: var(--muted); font-size: .88rem; line-height: 1.55; }
+.day { margin-top: 18px; }
+.day h3 { margin: 0 0 4px; font-size: .85rem; font-weight: 600; letter-spacing: .03em; color: var(--muted); line-height: 1.5; }
+.sessions { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.sessions li { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); align-items: start; }
+.sessions li.past { opacity: .5; }
+.time { font-size: 1.35rem; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.4; white-space: nowrap; }
+.what { min-width: 0; display: grid; gap: 1px; }
+.name { display: flex; align-items: flex-start; gap: 10px; font-weight: 600; line-height: 1.5; }
+.name > span:last-child { min-width: 0; overflow-wrap: anywhere; }
+.num { flex: 0 0 auto; display: inline-grid; place-items: center; width: 26px; height: 26px; margin-top: 1px; border-radius: 50%; border: 1.5px solid var(--teal); color: var(--teal); font: 700 .8rem/1 var(--font-body); font-variant-numeric: tabular-nums; }
+.topic { font-size: .92rem; color: var(--ink); line-height: 1.55; padding-left: 36px; }
+.ref { font-size: .85rem; color: var(--muted); font-variant-numeric: tabular-nums; line-height: 1.5; padding-left: 36px; }
+.name.nonum ~ .topic, .name.nonum ~ .ref { padding-left: 0; }
+.pill { justify-self: start; margin: 4px 0 0 36px; font-size: .75rem; font-weight: 600; background: var(--amber); color: var(--on-amber); border-radius: 999px; padding: 1px 12px; line-height: 1.7; }
+.name.nonum ~ .pill { margin-left: 0; }
+
+.zoom { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: grid; gap: 12px; }
+.zoom h2 { color: var(--ink); }
+.cred { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.cred .val { font-size: 1.1rem; font-weight: 600; letter-spacing: .02em; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.cred .val.tba { font-weight: 400; color: var(--muted); font-size: 1rem; letter-spacing: 0; }
+.copy { flex: 0 0 auto; font: 600 .85rem var(--font-body); color: var(--ink); background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 6px 16px; cursor: pointer; }
+.join { display: block; text-align: center; text-decoration: none; background: var(--amber); color: var(--on-amber); font-weight: 600; border-radius: 12px; padding: 11px; }
+.join.off { background: transparent; color: var(--muted); border: 1px dashed var(--line); font-weight: 500; }
+
+footer { font-size: .85rem; color: var(--muted); line-height: 1.6; display: grid; gap: 2px; }
+#status { font-variant-numeric: tabular-nums; }
+@media (min-width: 640px) { body { padding-inline: 24px; padding-block: 40px 72px; } .sessions li { grid-template-columns: 112px minmax(0, 1fr); } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow" id="place">เกซอนซิตี ฟิลิปปินส์</div>
+    <h1>ประชุมสามัคคีธรรมสุดสัปดาห์ 2026 ที่เกซอนซิตี</h1>
+    <p class="dates" id="dates">30 ต.ค. – 2 พ.ย. 2026</p>
+    <p class="theme" id="theme" hidden></p>
+    <p class="theme-sub" id="themeSub" hidden></p>
+  </header>
+
+  <section class="where">
+    <label class="lbl" for="zone">ตอนนี้คุณอยู่ที่ไหน?</label>
+    <select id="zone"></select>
+    <div class="clock" id="clock"></div>
+  </section>
+
+  <section class="next" id="next" aria-live="polite"></section>
+
+  <section>
+    <h2>กำหนดการ</h2>
+    <p class="sub" id="sub"></p>
+    <div id="schedule"></div>
+  </section>
+
+  <section class="zoom" id="zoomCard" aria-label="Zoom"></section>
+
+  <footer>
+    <span>เวลาประชุมกำหนดตามเวลาฟิลิปปินส์ เวลาในเขตอื่นจะแปลงให้อัตโนมัติ</span>
+    <span id="status"></span>
+  </footer>
+</div>
+
+<script>
+/* ===== ข้อมูลต้นฉบับ =====
+   หน้านี้อ่านข้อมูลสดจากต้นฉบับทุกครั้งที่เปิด และตรวจซ้ำทุก 5 นาที
+   ถ้าอ่านต้นฉบับไม่ได้ จะใช้ข้อมูลสำรอง (SNAPSHOT) ด้านล่างนี้แทน */
+const SOURCE_URLS = [
+  "https://truman-ai.github.io/gathering-2026f-r9k2/261030/event.json",
+  "https://raw.githubusercontent.com/truman-ai/gathering-2026f-r9k2/main/261030/event.json"
+];
+const REFRESH_MS = 5 * 60 * 1000;
+const DEFAULT_MINUTES = 120;   // ความยาวมาตรฐานของแต่ละครั้ง (เท่ากับต้นฉบับ) ใช้กับป้าย "กำลังดำเนินอยู่"
+
+const SNAPSHOT = {
+  hostTz: "Asia/Manila",
+  place: "เกซอนซิตี ฟิลิปปินส์",
+  start: "2026-10-30", end: "2026-11-02",
+  theme: "", themeSub: "",
+  zoom: { id: "", passcode: "", link: "" },
+  sessions: [
+    { date: "2026-10-30", time: "19:00", numbered: true, title: "การประชุมช่วงค่ำ", topic: "" },
+    { date: "2026-10-31", time: "10:00", numbered: true, title: "การประชุมช่วงเช้า", topic: "" },
+    { date: "2026-10-31", time: "19:00", numbered: true, title: "การประชุมช่วงค่ำ", topic: "" },
+    { date: "2026-11-01", time: "09:30", numbered: true, title: "การประชุมงานเลี้ยง", topic: "", minutes: 150 },
+    { date: "2026-11-01", time: "19:00", numbered: true, title: "การประชุมช่วงค่ำ", topic: "" },
+    { date: "2026-11-02", time: "10:00", numbered: true, title: "การประชุมช่วงเช้า", topic: "" }
+  ]
+};
+/* ============================ */
+
+const ZONES = [
+  { id: "th", name: "ไทย", tz: "Asia/Bangkok", also: ["Asia/Vientiane", "Asia/Phnom_Penh"] },
+  { id: "ph", name: "ฟิลิปปินส์", tz: "Asia/Manila" },
+  { id: "cn", name: "จีน", tz: "Asia/Shanghai", also: ["Asia/Chongqing", "Asia/Harbin"] },
+  { id: "vn", name: "เวียดนาม", tz: "Asia/Ho_Chi_Minh", also: ["Asia/Saigon"] },
+  { id: "kr", name: "เกาหลีใต้", tz: "Asia/Seoul" },
+  { id: "eu", name: "ยุโรป (เยอรมนี สวิตเซอร์แลนด์)", tz: "Europe/Berlin", also: ["Europe/Zurich", "Europe/Vienna", "Europe/Paris", "Europe/Amsterdam", "Europe/Brussels", "Europe/Rome", "Europe/Madrid", "Europe/Prague", "Europe/Warsaw", "Europe/Copenhagen", "Europe/Oslo", "Europe/Stockholm", "CET"] },
+  { id: "ca", name: "แคลิฟอร์เนีย", tz: "America/Los_Angeles" },
+  { id: "to", name: "แคนาดา (โตรอนโต)", tz: "America/Toronto", also: ["America/Montreal"] }
+];
+const HOME = ZONES[0];
+const LOC = "th-TH-u-ca-gregory";
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+const fm = (tz, o) => new Intl.DateTimeFormat(LOC, { timeZone: tz, ...o });
+const hm = (tz, d) => new Intl.DateTimeFormat("en-GB", { timeZone: tz, hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).format(d);
+const hms = (tz, d) => new Intl.DateTimeFormat("en-GB", { timeZone: tz, hour: "2-digit", minute: "2-digit", second: "2-digit", hourCycle: "h23" }).format(d);
+const dayKey = (tz, d) => new Intl.DateTimeFormat("en-CA", { timeZone: tz, year: "numeric", month: "2-digit", day: "2-digit" }).format(d);
+const dayLong = (tz, d) => fm(tz, { weekday: "long", day: "numeric", month: "short" }).format(d);
+const dayShort = (tz, d) => fm(tz, { weekday: "short", day: "numeric", month: "short" }).format(d);
+const validTz = tz => { try { new Intl.DateTimeFormat("en-US", { timeZone: tz }); return true; } catch (e) { return false; } };
+
+// Turn a local date and time in a named time zone into the real moment it happens.
+function zonedToDate(dateStr, timeStr, tz) {
+  const [y, m, d] = dateStr.split("-").map(Number);
+  const [hh, mm] = timeStr.split(":").map(Number);
+  const want = Date.UTC(y, m - 1, d, hh, mm);
+  let utc = want;
+  for (let i = 0; i < 2; i++) {
+    const parts = new Intl.DateTimeFormat("en-US", { timeZone: tz, hourCycle: "h23", year: "numeric", month: "numeric", day: "numeric", hour: "numeric", minute: "numeric" }).formatToParts(new Date(utc));
+    const g = t => +parts.find(p => p.type === t).value;
+    utc += want - Date.UTC(g("year"), g("month") - 1, g("day"), g("hour"), g("minute"));
+  }
+  return new Date(utc);
+}
+
+// Read the source file and keep only the Thai text. Returns null when the file does not look right.
+function normalize(raw) {
+  try {
+    const th = v => !v ? "" : typeof v === "string" ? v : (typeof v.th === "string" ? v.th : "");
+    if (!raw || !Array.isArray(raw.sessions) || !raw.sessions.length) return null;
+    if (!validTz(raw.hostTz)) return null;
+    const re = { d: /^\d{4}-\d{2}-\d{2}$/, t: /^\d{1,2}:\d{2}$/ };
+    const sessions = raw.sessions.filter(s => s && re.d.test(s.date) && re.t.test(s.time)).map(s => ({
+      date: s.date, time: s.time.length === 4 ? "0" + s.time : s.time,
+      numbered: s.numbered !== false,
+      title: th(s.title) || "การประชุม",
+      topic: th(s.topic),
+      minutes: Number(s.duration) > 0 ? Number(s.duration) : undefined
+    }));
+    if (!sessions.length || !raw.dates || !re.d.test(raw.dates.start) || !re.d.test(raw.dates.end)) return null;
+    const link = raw.zoom && typeof raw.zoom.link === "string" && /^https:\/\//i.test(raw.zoom.link) ? raw.zoom.link : "";
+    return {
+      hostTz: raw.hostTz,
+      place: th(raw.place) || SNAPSHOT.place,
+      start: raw.dates.start, end: raw.dates.end,
+      theme: th(raw.theme), themeSub: th(raw.themeSub),
+      zoom: { id: String((raw.zoom && raw.zoom.id) || ""), passcode: String((raw.zoom && raw.zoom.passcode) || ""), link },
+      sessions
+    };
+  } catch (e) { return null; }
+}
+
+let state = SNAPSHOT;
+let SESS = [];
+let lastSync = null, syncFailed = false;
+
+function buildSessions() {
+  let n = 0;
+  SESS = state.sessions.map(s => ({
+    ...s, num: s.numbered ? ++n : 0,
+    start: zonedToDate(s.date, s.time, state.hostTz)
+  })).sort((a, b) => a.start - b.start);
+}
+const endOf = s => new Date(s.start.getTime() + (s.minutes || DEFAULT_MINUTES) * 60000);
+const hostZone = () => ZONES.find(z => z.tz === state.hostTz) || { id: "host", name: "ที่ประชุม", tz: state.hostTz };
+
+const deviceTz = (() => { try { return Intl.DateTimeFormat().resolvedOptions().timeZone; } catch (e) { return null; } })();
+const findZone = tz => ZONES.find(z => z.tz === tz || (z.also || []).includes(tz));
+let saved = null;
+try { saved = localStorage.getItem("qc-zone"); } catch (e) {}
+let current = ZONES.find(z => z.id === saved) || (deviceTz && findZone(deviceTz)) || HOME;
+
+function buildSelect() {
+  const sel = $("zone");
+  ZONES.forEach(z => {
+    const o = document.createElement("option");
+    o.value = z.id; o.textContent = z.name;
+    sel.appendChild(o);
+  });
+  sel.value = current.id;
+  sel.addEventListener("change", () => {
+    current = ZONES.find(z => z.id === sel.value) || HOME;
+    try { localStorage.setItem("qc-zone", current.id); } catch (e) {}
+    render();
+  });
+}
+
+function countdown(ms) {
+  const mins = Math.max(0, Math.round(ms / 60000));
+  const d = Math.floor(mins / 1440), h = Math.floor((mins % 1440) / 60), m = mins % 60;
+  const parts = [];
+  if (d) parts.push(d + " วัน");
+  if (h) parts.push(h + " ชม.");
+  if (!d) parts.push(m + " นาที");
+  return "อีก " + parts.join(" ");
+}
+
+const label = s => `${s.num ? "ครั้งที่ " + s.num + " · " : ""}${esc(s.title)}`;
+
+function renderHeader() {
+  $("place").textContent = state.place;
+  const a = new Date(state.start + "T12:00:00Z"), b = new Date(state.end + "T12:00:00Z");
+  const f = (d, o) => new Intl.DateTimeFormat(LOC, { timeZone: "UTC", ...o }).format(d);
+  $("dates").textContent = `${f(a, { day: "numeric", month: "short" })} – ${f(b, { day: "numeric", month: "short", year: "numeric" })}`;
+  $("theme").hidden = !state.theme; $("theme").textContent = state.theme;
+  $("themeSub").hidden = !state.themeSub; $("themeSub").textContent = state.themeSub;
+}
+
+function renderNext() {
+  const now = new Date(), z = current, box = $("next");
+  const live = SESS.find(s => s.start <= now && now < endOf(s));
+  const nxt = SESS.find(s => s.start > now);
+  if (live) {
+    box.innerHTML = `<div class="k">กำลังดำเนินอยู่</div><div class="t">${label(live)}</div><div class="s">${dayShort(z.tz, live.start)} · ${hm(z.tz, live.start)} น.</div>`;
+  } else if (nxt) {
+    box.innerHTML = `<div class="k">ถัดไป · ${countdown(nxt.start - now)}</div><div class="t">${label(nxt)}</div><div class="s">${dayShort(z.tz, nxt.start)} · ${hm(z.tz, nxt.start)} น.</div>`;
+  } else {
+    box.innerHTML = `<div class="k">การประชุมสิ้นสุดแล้ว</div><div class="t">ขอบคุณที่ร่วมสามัคคีธรรมด้วยกัน</div>`;
+  }
+}
+
+function renderSchedule() {
+  const z = current, now = new Date(), host = hostZone();
+  const sameAsHost = z.tz === host.tz;
+  $("sub").textContent = sameAsHost
+    ? `แสดงตามเวลา${host.name}`
+    : `แสดงตามเวลา${z.name} และระบุเวลา${host.name}ไว้ใต้แต่ละรายการ`;
+  const groups = [], map = {};
+  SESS.forEach(s => {
+    const k = dayKey(z.tz, s.start);
+    if (!map[k]) { map[k] = { d: s.start, items: [] }; groups.push(map[k]); }
+    map[k].items.push(s);
+  });
+  const nxt = SESS.find(s => s.start > now);
+  $("schedule").innerHTML = groups.map(g => {
+    const rows = g.items.map(s => {
+      const live = s.start <= now && now < endOf(s);
+      const past = endOf(s) <= now;
+      const pill = live ? `<span class="pill">กำลังดำเนินอยู่</span>` : (s === nxt ? `<span class="pill">ถัดไป</span>` : "");
+      const hostLine = sameAsHost ? "" : `<div class="ref">${dayShort(host.tz, s.start)} · ${hm(host.tz, s.start)} น. เวลา${esc(host.name)}</div>`;
+      return `<li class="${past ? "past" : ""}">
+        <div class="time">${hm(z.tz, s.start)} น.</div>
+        <div class="what">
+          <div class="name ${s.num ? "" : "nonum"}">${s.num ? `<span class="num">${s.num}</span>` : ""}<span>${esc(s.title)}</span></div>
+          ${s.topic ? `<div class="topic">${esc(s.topic)}</div>` : ""}
+          ${hostLine}${pill}
+        </div></li>`;
+    }).join("");
+    return `<div class="day"><h3>${dayLong(z.tz, g.d)}</h3><ul class="sessions">${rows}</ul></div>`;
+  }).join("");
+}
+
+function tick() {
+  const n = new Date(), z = current;
+  $("clock").innerHTML = `เวลาขณะนี้ที่${esc(z.name)}: <b>${dayShort(z.tz, n)}, ${hms(z.tz, n)} น.</b>`;
+}
+
+function renderStatus() {
+  const el = $("status");
+  if (lastSync) el.textContent = `ข้อมูลตรงกับต้นฉบับ ณ ${hm(current.tz, lastSync)} น. (เวลา${current.name})`;
+  else if (syncFailed) el.textContent = "ยังเชื่อมต่อต้นฉบับไม่ได้ จึงแสดงข้อมูลที่บันทึกไว้ล่าสุด";
+  else el.textContent = "กำลังตรวจสอบข้อมูลกับต้นฉบับ…";
+}
+
+async function copyText(text, btn) {
+  const orig = btn.textContent;
+  try { await navigator.clipboard.writeText(text); btn.textContent = "คัดลอกแล้ว"; }
+  catch (e) { btn.textContent = "เลือกข้อความเพื่อคัดลอก"; }
+  setTimeout(() => { btn.textContent = orig; }, 1800);
+}
+
+function renderZoom() {
+  const Z = state.zoom;
+  const row = (lbl, value) => `
+    <div class="cred">
+      <div><div class="lbl">${lbl}</div><div class="val ${value ? "" : "tba"}">${value ? esc(value) : "รอประกาศ"}</div></div>
+      ${value ? `<button class="copy" type="button" data-copy="${esc(value.replace(/\s/g, ""))}">คัดลอก</button>` : ""}
+    </div>`;
+  $("zoomCard").innerHTML = `<h2>ประชุม Zoom</h2>${row("รหัสการประชุม", Z.id)}${row("รหัสผ่าน", Z.passcode)}
+    ${Z.link ? `<a class="join" href="${esc(Z.link)}" target="_blank" rel="noopener noreferrer">เข้าร่วมประชุมทาง Zoom</a>` : `<div class="join off">ลิงก์ Zoom รอประกาศ</div>`}`;
+  document.querySelectorAll(".copy").forEach(b => b.addEventListener("click", () => copyText(b.dataset.copy, b)));
+}
+
+function render() { buildSessions(); renderHeader(); tick(); renderNext(); renderSchedule(); renderZoom(); renderStatus(); }
+
+async function fetchJson(url) {
+  const ctl = new AbortController();
+  const timer = setTimeout(() => ctl.abort(), 8000);
+  try {
+    const res = await fetch(url + "?t=" + Math.floor(Date.now() / 60000), { signal: ctl.signal, cache: "no-store" });
+    if (!res.ok) throw new Error("http " + res.status);
+    return await res.json();
+  } finally { clearTimeout(timer); }
+}
+
+async function syncFromSource() {
+  for (const url of SOURCE_URLS) {
+    try {
+      const next = normalize(await fetchJson(url));
+      if (next) {
+        const changed = JSON.stringify(next) !== JSON.stringify(state);
+        state = next; lastSync = new Date(); syncFailed = false;
+        if (changed) render(); else renderStatus();
+        return;
+      }
+    } catch (e) { /* try the next address */ }
+  }
+  syncFailed = !lastSync;
+  renderStatus();
+}
+
+buildSelect();
+render();
+syncFromSource();
+setInterval(syncFromSource, REFRESH_MS);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) syncFromSource(); });
+let n = 0;
+setInterval(() => { tick(); if (++n % 30 === 0) { renderNext(); renderSchedule(); } }, 1000);
+</script>
+</body>
+</html>
